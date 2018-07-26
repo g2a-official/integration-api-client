@@ -1,0 +1,22 @@
+{
+  "name": "g2a/integration-api-client",
+  "license": "proprietary",
+  "description": "G2A Integration API client",
+  "type": "library",
+  "homepage": "https://www.g2a.com/integration-api",
+  "require": {
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "G2A\\IntegrationApi\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": { "Tests\\": "tests/" }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6",
+    "friendsofphp/php-cs-fixer": "^2.10"
+  }
+}
