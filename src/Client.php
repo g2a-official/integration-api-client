@@ -90,8 +90,10 @@ class Client implements ClientInterface
     public function getHttpClient()
     {
         if (null === $this->httpClient) {
+            $verify = ($this->config->getApiDomain() != 'sandboxapi.g2a.com');
             $this->httpClient = new \GuzzleHttp\Client([
                 'base_uri' => $this->config->getApiProtocol() . '://' . $this->config->getApiDomain() . '/',
+                'verify' => $verify
             ]);
         }
 
